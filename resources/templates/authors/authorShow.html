@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>스테이트먼트</th>
+                <th>날짜</th>
+                <th>이름</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="author, iterStat : ${authors}">
+                <td th:text="${iterStat.count}"></td>
+                <td th:text="${author.statement}"></td>
+                <td th:text="${author.date}"></td>
+                <td th:text="${author.name}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>
